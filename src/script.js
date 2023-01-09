@@ -194,7 +194,7 @@ window.addEventListener('scroll', () => {
  */
 const cursor = {}
 cursor.x = 0
-cursor.y = 0
+cursor.y = 0 
 
 window.addEventListener('mousemove', (event) => {
     cursor.x = event.clientX / sizes.width - 0.5
@@ -217,8 +217,8 @@ const tick = () => {
 
     const parallaxX = cursor.x * 0.5
     const parallaxY = - cursor.y * 0.5
-    cameraGroup.position.x += (parallaxX - cameraGroup.position.x) * 3 * deltaTime
-    cameraGroup.position.y += (parallaxY - cameraGroup.position.y) * 3 * deltaTime
+    cameraGroup.position.x += (parallaxX - cameraGroup.position.x) * 4 * deltaTime
+    cameraGroup.position.y += (parallaxY - cameraGroup.position.y) * 4 * deltaTime
 
     // Animate meshes
     for (const mesh of sectionsMeshes) {
